@@ -12,7 +12,8 @@ import { UserContext } from "../../App";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import { Navigate, useNavigate } from "react-router-dom";
-
+import IconButton from "@mui/material/IconButton";
+import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 function preventDefault(event) {
   event.preventDefault();
 }
@@ -22,6 +23,7 @@ export default function Doctor() {
   const [departments, setDepartments] = useState([]);
   const [loading, setLoading] = useState("Loading...");
   const [error, setError] = useState("");
+  const [rows, setRows] = useState([]);
   const [user, setuser] = useState(JSON.parse(localStorage.getItem("user")));
   useEffect(() => {
     const token = localStorage.getItem("jwt");

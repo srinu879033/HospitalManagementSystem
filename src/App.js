@@ -11,6 +11,7 @@ import CreateOpd from "./components/sign-up/CreateOpd";
 import SignIn from "./components/sign-in/SignIn";
 import Dashboard from "./components/dashboard/Dashboard";
 import BookApt from "./components/dashboard/BookApt";
+import Doctor from "./components/dashboard/Doctor";
 import { useEffect, createContext, useReducer, useContext } from "react";
 import { initialState, reducer } from "./reducers/userReducer";
 import { useCookies } from "react-cookie";
@@ -37,6 +38,7 @@ const Routing = () => {
       <Route path="/create-doctor" element={<CreateDoctor />} />
       <Route path="/create-opd-schedule" element={<CreateOpd />} />
       <Route path="/book-appointment" element={<BookApt />} />
+      {/* <Route path="/doctors" element={<Doctor />} /> */}
     </Routes>
   );
 };

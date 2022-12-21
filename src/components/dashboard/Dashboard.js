@@ -201,7 +201,7 @@ function DashboardContent() {
           <Toolbar />
           <Routes>
             <Route path="/" element={<Apt />} />
-            {/* <Route path="/doctors" element={<Doctor/>} */}
+            <Route path="/doctors" element={<Doctor />} />
           </Routes>
         </Box>
       </Box>
