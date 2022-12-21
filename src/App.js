@@ -1,10 +1,4 @@
-import {
-  BrowserRouter,
-  Routes,
-  Link,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import { HashRouter, Routes, Link, Route, useNavigate } from "react-router-dom";
 import SignUp from "./components/sign-up/SignUp";
 import CreateDoctor from "./components/sign-up/CreateDoctor";
 import CreateOpd from "./components/sign-up/CreateOpd";
@@ -48,9 +42,9 @@ function App() {
   const [cookies, setCookie, removeCookie] = useCookies(["jwt"]);
   return (
     <UserContext.Provider value={{ state, dispatch }}>
-      <BrowserRouter>
+      <HashRouter>
         <Routing></Routing>
-      </BrowserRouter>
+      </HashRouter>
     </UserContext.Provider>
   );
 }
